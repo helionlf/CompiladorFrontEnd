@@ -46,7 +46,6 @@ if (x < y) {
 } else {
     return 1;
 }
-´´´
 
 
 ### Passo 2: Executar o compilador
