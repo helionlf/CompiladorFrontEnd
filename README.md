@@ -46,10 +46,12 @@ if (x < y) {
 } else {
     return 1;
 }
+´´´
 
 
 ### Passo 2: Executar o compilador
-Abra o terminal no diretório do projeto e execute o script **run.bat** com o comando:
+Abra o terminal no diretório do projeto e execute o script **.\run.bat** com o comando:
 
-```bash
-run.bat
+```
+.\run.bat
+´´´
