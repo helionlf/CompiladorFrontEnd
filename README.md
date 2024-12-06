@@ -15,8 +15,8 @@ O compilador foi dividido nas seguintes etapas:
 ## Requisitos
 
 - **Java JDK** (versão 8 ou superior)
-- **JFlex**: Ferramenta para geração de analisadores léxicos. [JFlex Official Website](https://www.jflex.de/)
-- **JavaCup**: Ferramenta para geração de analisadores sintáticos (parser). [JavaCup GitHub](https://github.com/javacup/javacup)
+- **JFlex**: Ferramenta para geração de analisadores léxicos.
+- **JavaCup**: Ferramenta para geração de analisadores sintáticos
 - **Arquivo .bat**: Para facilitar a execução do compilador no ambiente Windows.
 
 ## Como Rodar o Compilador
