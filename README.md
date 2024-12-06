@@ -46,7 +46,7 @@ if (x < y) {
 } else {
     return 1;
 }
-´´´
+```
 
 
 ### Passo 2: Executar o compilador
@@ -54,4 +54,11 @@ Abra o terminal no diretório do projeto e execute o script **.\run.bat** com o 
 
 ```
 .\run.bat
-´´´
+```
+
+# Autores
+
+- Nome: Francisco Hélio - Matrícula: 2217693
+- Nome: Cauã Melo - Matrícula: [Matrícula do Outro Autor]
+
+
