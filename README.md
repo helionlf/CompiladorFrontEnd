@@ -24,6 +24,31 @@ O compilador foi dividido nas seguintes etapas:
 ### Passo 1: Preparar o código de entrada
 Crie o código que deseja compilar e coloque-o no arquivo **input.txt**. Este arquivo deve estar na raiz do projeto. Certifique-se de que o código siga as regras léxicas definidas para o compilador.
 
+Aqui estão três exemplos de código que podem ser usados no input.txt:
+```
+a = 5 + 3;
+```
+
+```
+x = 0;
+
+while (x <= 20) {
+    x = x + 1;
+}
+```
+
+```
+x = 10;
+y = 5;
+
+if (x < y) {
+    return 0;
+} else {
+    return 1;
+}
+´´´
+
+
 ### Passo 2: Executar o compilador
 Abra o terminal no diretório do projeto e execute o script **run.bat** com o comando:
 
