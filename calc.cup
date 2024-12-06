@@ -1,0 +1,74 @@
+import java_cup.runtime.*;
+
+parser code {:
+    scanner s;
+    parser(scanner s) { this.s = s; }
+:}
+
+scan with {: return s.next_token(); :};
+
+terminal            PLUS, MINUS, TIMES, DIVIDE, LPAREN, RPAREN, LCURLY, RCURLY, SEMI, COMMA;
+terminal Integer    INT_CONST;
+terminal Float      FLOAT_CONST;
+terminal String     ID, IF, ELSE, WHILE, RETURN, INT, FLOAT;
+terminal EQ, NEQ, LT, LE, GT, GE, ATRIBUICAO;
+
+non terminal        program, stmt_list, stmt, var_decl, func_decl, block, if_stmt, while_stmt, expr_stmt, return_stmt, expr, param_list, param;
+
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
+precedence left EQ, NEQ, LT, LE, GT, GE, ATRIBUICAO;
+precedence left ELSE;
+
+program     ::= stmt_list;
+
+stmt_list   ::= stmt_list stmt
+              | stmt;
+
+stmt        ::= var_decl
+              | func_decl
+              | block
+              | if_stmt
+              | while_stmt
+              | expr_stmt
+              | return_stmt;
+
+var_decl    ::= INT ID SEMI
+              | FLOAT ID SEMI;
+
+func_decl   ::= ID ID LPAREN param_list RPAREN block;
+
+param_list ::= param_list COMMA param
+            | param
+            | ;
+
+param       ::= INT ID
+              | FLOAT ID;
+
+block       ::= LCURLY stmt_list RCURLY;
+
+if_stmt     ::= IF LPAREN expr RPAREN stmt ELSE stmt
+              | IF LPAREN expr RPAREN stmt;
+
+while_stmt  ::= WHILE LPAREN expr RPAREN stmt;
+
+expr_stmt   ::= expr SEMI;
+
+return_stmt ::= RETURN expr SEMI
+              | RETURN SEMI;
+
+expr        ::= expr:e1 PLUS expr:e2
+              | expr:e1 MINUS expr:e2
+              | expr:e1 TIMES expr:e2
+              | expr:e1 DIVIDE expr:e2
+              | expr:e1 EQ expr:e2
+              | expr:e1 NEQ expr:e2
+              | expr:e1 LT expr:e2
+              | expr:e1 LE expr:e2
+              | expr:e1 GT expr:e2
+              | expr:e1 GE expr:e2
+              | expr:e1 ATRIBUICAO expr:e2
+              | LPAREN expr:e RPAREN
+              | ID
+              | INT_CONST
+              | FLOAT_CONST;
