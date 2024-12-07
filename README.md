@@ -59,6 +59,6 @@ Abra o terminal no diretório do projeto e execute o arquivo **run.bat** com o c
 # Autores
 
 - Nome: Francisco Hélio - Matrícula: 2217693
-- Nome: Cauã Melo - Matrícula: [Matrícula do Outro Autor]
+- Nome: Cauã Melo - Matrícula: 2217667
 
 
